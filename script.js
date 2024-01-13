@@ -1,20 +1,23 @@
 // Essential variables for DOM manipulation
-//var body = document.body;
+var body = document.body;
 
 // Display the Title page
+
+/*
 var titleQuiz = document.querySelector("#title-quiz");
 titleQuiz.setAttribute("style", "margin:20px auto; width:50%; text-align:center;");
 
 var instruction = document.querySelector("#instructions");
 instruction.setAttribute("style", "font-size:25px; margin:auto; width:50%; text-align:center;");
 
-var startQuiz = document.querySelector("#start-quiz");
-startQuiz.addEventListener("click", function(){
+var startQuiz = document.querySelector("#start-quiz").addEventListener("click", function(){
     // * place function to display the question page here and show the first qustion
 });
 
+startQuiz.setAttribute("style", "color: purple");
+startQuiz.textContent = "Start Quiz";
+*/
 
-/*
 var titleQuiz = document.createElement("h1");
 var instruction = document.createElement("p");
 
@@ -26,7 +29,7 @@ body.appendChild(instruction);
 
 titleQuiz.setAttribute("style", "margin: 20px auto; width:50%; text-align:center;");
 instruction.setAttribute("style", "font-size:25px; margin:auto; width:50%; text-align:center;");
-*/ 
+
 
 // Display the Multiple-Answer Choice Question Pages 
 
