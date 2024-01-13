@@ -1,4 +1,4 @@
-// Essential varaibles for DOM manipulation
+// Essential variables for DOM manipulation
 var body = document.body;
 
 // Display the Title page
@@ -31,4 +31,26 @@ var body = document.body;
             a. timer runs out -> automatically displays the Enter Initials page, score is 0
             b. if timer hasn't run out and user selected an answer -> display to the next question 
             c. if user already answered five questions -> displays the Enter Initials page, score is the amount of time remaining
+
+    Enter Initials Page:
+        1. Contains a keyboard event listener where the user types out the initials 
+            a. Text "Enter your initials:" should be to the left of this event listener
+        2. Contains a "Submit" event listener (placed to the right of the keyboard event listener) when clicked, must check whether the user has entered the initials, and then displays the View High Scores webpage with the initials and score saved
+        3. The amount of remaining time will be the score that is displayed in the text "Your final score is " + score "."
+        4. Contains a "View high scores" event listener when clicked, displays the View High Scores webpage
+        5. Contains the timer element where it stops counting down
+        
+    Should contain an empty array where it contains the initials and score values saved
+    Should order the score values accordingly from greatest to least with the greatest placed at the top
+    Should have the array update the initials and scores entered when displayed 
+
+    View High Scores Page:
+        1. Contains a h2 "High Score" heading text-align: left
+        2. Displayed an ordered list where each list item is the box container are all dark/light purple shaded with black text
+            a. Preferably ordered the array from greatest to least and then display in order
+            b. Text format: <initials> - <score> 
+        3. 2 Event Listeners arranged horizontally
+            1. Go Back Button - when clicked will display the title page
+            2. Clear High Score button - when clicked will clear out the array containing the initials and score and show an empty purple box instead
+        4. No Timer and No View High Scores displayed on this webpage
 */
