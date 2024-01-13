@@ -1,7 +1,32 @@
 // Essential variables for DOM manipulation
-var body = document.body;
+//var body = document.body;
 
 // Display the Title page
+var titleQuiz = document.querySelector("#title-quiz");
+titleQuiz.setAttribute("style", "margin:20px auto; width:50%; text-align:center;");
+
+var instruction = document.querySelector("#instructions");
+instruction.setAttribute("style", "font-size:25px; margin:auto; width:50%; text-align:center;");
+
+var startQuiz = document.querySelector("#start-quiz");
+startQuiz.addEventListener("click", function(){
+    // * place function to display the question page here and show the first qustion
+});
+
+
+/*
+var titleQuiz = document.createElement("h1");
+var instruction = document.createElement("p");
+
+titleQuiz.textContent = "Coding Quiz Challenge"
+instruction.textContent = "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answrs will penalize your score/time by ten seconds!"
+
+body.appendChild(titleQuiz);
+body.appendChild(instruction);
+
+titleQuiz.setAttribute("style", "margin: 20px auto; width:50%; text-align:center;");
+instruction.setAttribute("style", "font-size:25px; margin:auto; width:50%; text-align:center;");
+*/ 
 
 // Display the Multiple-Answer Choice Question Pages 
 
