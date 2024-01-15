@@ -1,7 +1,19 @@
 // Essential variables for DOM manipulation
 var body = document.body;
 
-// Display the Title page
+var titleQuiz = document.createElement("h1");
+var instruction = document.createElement("p");
+
+titleQuiz.textContent = "Coding Quiz Challenge"
+instruction.textContent = "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answrs will penalize your score/time by ten seconds!"
+
+body.appendChild(titleQuiz);
+body.appendChild(instruction);
+
+titleQuiz.setAttribute("style", "margin: 20px auto; width:50%; text-align:center;");
+instruction.setAttribute("style", "font-size:25px; margin:auto; width:50%; text-align:center;");
+
+// & Display the Title page
 
 /*
 var titleQuiz = document.querySelector("#title-quiz");
@@ -18,26 +30,110 @@ startQuiz.setAttribute("style", "color: purple");
 startQuiz.textContent = "Start Quiz";
 */
 
-var titleQuiz = document.createElement("h1");
-var instruction = document.createElement("p");
+var startQuiz = document.getElementById("start-quiz");
+startQuiz.textContent = "Start Quiz";
+document.body.appendChild(startQuiz);
 
-titleQuiz.textContent = "Coding Quiz Challenge"
-instruction.textContent = "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answrs will penalize your score/time by ten seconds!"
+/* 
+TODO function displayTitlePage 
+    Notes:
+        1) It's the only page that gets displayed when the user clicks on the deployed application URL
+        2) After clicking the button Go Back in the High Scores page, only the title page should be displayed. 
 
-body.appendChild(titleQuiz);
-body.appendChild(instruction);
+*/
 
-titleQuiz.setAttribute("style", "margin: 20px auto; width:50%; text-align:center;");
-instruction.setAttribute("style", "font-size:25px; margin:auto; width:50%; text-align:center;");
+// & Display the Multiple-Answer Choice Question Pages 
+
+/* 
+TODO function displayQuestionPage
+    1) After user clicks on the Start Quiz page, the question page is displayed, the first question is displayed, all the answer choices to the first question is displayed, timer starts counting down
+    2) When user finishes answering all five Questions OR the timer runs out in the middle of the quiz, the quiz results page is immediately displayed
+    3) When user answers a question (that is not the last question), the next question is displayed and all the answer choices for that question gets displayed along with the results for the previous question displayed for only 5 seconds before disappearing
+*/
+
+/* 
+TODO function displayQuestion
+    1) array gets created where each question is dislayed and array of four answer choices get dislayed in each of the buttons 
+    2) array gets created for correct answers for function checkUserAnswer to check 
+*/
+
+/* 
+TODO function checkUserAnswer
+    Notes:
+    1) Checks if answer user selected is correct or not
+    2) if not correct, subtract 10 seconds from the timer and displays "Wrong!" below the answer choices
+    3) if correct, displays "Correct!" below the answer choices
+*/
+
+/*
+TODO function timerDecrement
+*/
 
 
-// Display the Multiple-Answer Choice Question Pages 
+//  & Display the Enter Initials page, which will be the page after either the timer runs out or the user answers all the questions
 
-// Display the Enter Initials page, which will be the page after either the timer runs out or the user answers all the questions
+/* 
+TODO function displayQuizResultsPage
+    Notes:
+    1) should only display Quiz Results Page in only two situations:
+        1) User finishes answering all five questions
+        2) User runs out of time
+    2) Enter Initials event listener
+    3) Submit button, when clicked AND user enters the initials, displays the High Scores Page 
+*/
 
-// Display the View High Scores page 
+/* 
+TODO function displayScore  
+*/
 
-/* Important Notes:
+/*
+TODO function submit event listener
+Notes:
+    1. Should also add score and initials as key-value pair when clicked submit 
+*/
+
+/*
+TODO function checkInitialsEntered
+Notes:
+    1. Will check whether the user has entered at least some initials in keyboard event listener 
+    2. Will give user an alert prompt that they need to enter their initials 
+*/
+
+// & Display the View High Scores page 
+/* 
+TODO function displayHighScoresPage
+    Notes:
+    1) Should display High Score page only when user clicks the Submit button in Quiz Results page and have entered an initials (at least one letter or symbol) 
+    2) When user clicks the View High Scores event listener, will display the High Scores Page
+        3) If used to exit the question page, the timer is stopped and set to its initial value 
+    3) Go Back button - event listener when clicked will display the title page
+    4) Ordered list: 
+        1) Array with key:value pairs where value is arranged from greatest to least value
+        2) then dislayed accordingly 
+    5) Clear High Scores button - event listener when clicked will empty the high scores and initials array and then displays only one purple box with empty letters there
+*/ 
+
+/*
+TODO function arrangeScores
+    Notes:
+    1) Arrange scores from greatest to least 
+*/
+
+/*
+TODO function displaySavedScores 
+    Notes:
+    1) Create a purple box element that its text content will be in the format <initial> - <score>
+*/
+
+/*
+TODO function clearHighScores
+    Notes:
+    1) After clicking the Clear High Scores button event listener, will delete all saved initials and scores from the array and then only displays an empty purple box 
+*/
+
+
+/* 
+^ Important Notes:
     Title Page:
         1. Contains a timer element "Time" where it displays "Time: 0" at all times
         2. Contains a "View high scores" event listener when clicked, displays the high score results page
