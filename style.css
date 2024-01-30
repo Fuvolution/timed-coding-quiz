@@ -19,6 +19,12 @@
     background-color: mediumorchid;
 }
 
+nav {
+    color: mediumorchid;
+    font-size: 20px;
+    margin: 20px auto;
+}
+
 button {
     display: flex;
     background-color: indigo;
