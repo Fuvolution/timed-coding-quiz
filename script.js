@@ -1,17 +1,6 @@
 // Essential variables for DOM manipulation
 var body = document.body;
-
-var titleQuiz = document.createElement("h1");
-var instruction = document.createElement("p");
-
-titleQuiz.textContent = "Coding Quiz Challenge"
-instruction.textContent = "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answrs will penalize your score/time by ten seconds!"
-
-body.appendChild(titleQuiz);
-body.appendChild(instruction);
-
-titleQuiz.setAttribute("style", "margin: 20px auto; width:50%; text-align:center;");
-instruction.setAttribute("style", "font-size:25px; margin:auto; width:50%; text-align:center;");
+displayTitleScreen();
 
 // & Display the Title page
 
@@ -29,10 +18,11 @@ var startQuiz = document.querySelector("#start-quiz").addEventListener("click", 
 startQuiz.setAttribute("style", "color: purple");
 startQuiz.textContent = "Start Quiz";
 */
-
-var startQuiz = document.getElementById("start-quiz");
-startQuiz.textContent = "Start Quiz";
-document.body.appendChild(startQuiz);
+function displayTitleScreen(){
+    var startQuiz = document.getElementById("start-quiz");
+    startQuiz.textContent = "Start Quiz";
+    document.body.appendChild(startQuiz);
+}
 
 /* 
 TODO function displayTitlePage 

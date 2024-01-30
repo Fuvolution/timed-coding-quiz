@@ -38,3 +38,14 @@ button {
     justify-content: center;
     align-items: center;
 }
+
+h1{
+    font-size: 30px;
+}
+
+#instructions{
+    margin: 20px auto;
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+}
